@@ -1,0 +1,318 @@
+.dashboard {
+  padding: 40px 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
+/* Section d'accueil */
+.welcome-section {
+  margin-bottom: 48px;
+}
+
+.welcome-card {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: float 6s ease-in-out infinite;
+}
+
+.welcome-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-card p {
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+/* Statistiques utilisateur */
+.user-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 16px 24px;
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(10px);
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.stat-item small {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Section activités */
+.activities-section h2 {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 32px;
+  font-size: 2rem;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.activity-card {
+  background: white;
+  padding: 32px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.activity-card:hover::before {
+  left: 100%;
+}
+
+.activity-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 24px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.activity-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+.activity-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.activity-action {
+  margin-top: auto;
+}
+
+.play-button {
+  background: linear-gradient(135deg, var(--success-color), #34d399);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.activity-card:hover .play-button {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px -4px rgba(16, 185, 129, 0.4);
+}
+
+/* Section récompenses */
+.achievements-section h2 {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 32px;
+  font-size: 2rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.achievement-card {
+  background: white;
+  padding: 24px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.achievement-card.earned {
+  border-color: var(--success-color);
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+}
+
+.achievement-card.locked {
+  opacity: 0.6;
+  background-color: #f3f4f6;
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.achievement-card p {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.earned-badge {
+  background: var(--success-color);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Section motivation */
+.motivation-section {
+  margin-top: 48px;
+}
+
+.motivation-card {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: white;
+  padding: 32px;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  box-shadow: var(--shadow);
+}
+
+.motivation-content {
+  flex: 1;
+}
+
+.motivation-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.motivation-content p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  opacity: 0.95;
+}
+
+.motivation-character {
+  font-size: 4rem;
+  animation: bounce 2s infinite;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-card {
+    padding: 24px;
+  }
+  
+  .welcome-card h1 {
+    font-size: 2rem;
+  }
+  
+  .user-stats {
+    gap: 16px;
+  }
+  
+  .stat-item {
+    padding: 12px 16px;
+  }
+  
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .motivation-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .motivation-character {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .achievement-card {
+    padding: 16px;
+  }
+}

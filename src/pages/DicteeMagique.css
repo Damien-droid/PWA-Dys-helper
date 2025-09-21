@@ -1,0 +1,297 @@
+.dictee-magique {
+  padding: 40px 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-section h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+.header-section p {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.score-display {
+  background: linear-gradient(135deg, var(--success-color), #34d399);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: var(--shadow);
+}
+
+/* Sélection de mode */
+.mode-selection {
+  background: white;
+  padding: 32px;
+  border-radius: var(--border-radius);
+  margin-bottom: 32px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.mode-selection h2 {
+  color: var(--text-color);
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+}
+
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mode-btn {
+  background: #f3f4f6;
+  border: 3px solid #e5e7eb;
+  padding: 16px 24px;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.mode-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.mode-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Zone de jeu */
+.game-area {
+  margin-bottom: 40px;
+}
+
+.start-section {
+  display: flex;
+  justify-content: center;
+}
+
+.start-card {
+  background: white;
+  padding: 48px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  border: 3px solid var(--primary-color);
+}
+
+.start-card h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.start-card p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+
+.btn-large {
+  font-size: 1.3rem;
+  padding: 16px 32px;
+}
+
+/* Dictée active */
+.dictation-active {
+  background: white;
+  padding: 32px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.input-section {
+  margin-bottom: 32px;
+}
+
+.input-section label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.input-section textarea {
+  width: 100%;
+  padding: 16px;
+  border: 3px solid #e5e7eb;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.input-section textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* Section d'aide */
+.help-section {
+  border-top: 2px solid #e5e7eb;
+  padding-top: 24px;
+}
+
+.help-section details {
+  background: #f8fafc;
+  border-radius: var(--border-radius);
+  padding: 16px;
+}
+
+.help-section summary {
+  font-weight: 600;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.help-section summary:hover {
+  background-color: #e0e7ff;
+}
+
+.help-content {
+  margin-top: 16px;
+  padding-left: 16px;
+}
+
+.help-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.help-content li {
+  padding: 8px 0;
+  position: relative;
+  padding-left: 24px;
+}
+
+.help-content li::before {
+  content: '💡';
+  position: absolute;
+  left: 0;
+}
+
+/* Statistiques de session */
+.session-stats {
+  background: white;
+  padding: 24px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border-radius: var(--border-radius);
+  border: 2px solid #e5e7eb;
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-card strong {
+  display: block;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.stat-card p {
+  color: #6b7280;
+  margin: 4px 0 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dictee-magique {
+    padding: 20px 0;
+  }
+  
+  .header-section h1 {
+    font-size: 2rem;
+  }
+  
+  .mode-selection,
+  .dictation-active {
+    padding: 24px;
+  }
+  
+  .start-card {
+    padding: 32px;
+    margin: 0 16px;
+  }
+  
+  .audio-controls,
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .mode-buttons {
+    flex-direction: column;
+  }
+  
+  .mode-btn {
+    width: 100%;
+  }
+}
