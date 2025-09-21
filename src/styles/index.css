@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Comic Neue', 'OpenDyslexic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Accessibility improvements for dyslexic users */
+.accessible-text {
+  font-family: 'OpenDyslexic', 'Comic Neue', sans-serif;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+.large-text {
+  font-size: 1.2em;
+}
+
+.extra-large-text {
+  font-size: 1.5em;
+}
+
+.highlight-text {
+  background-color: #fff3cd;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.high-contrast {
+  background-color: #000;
+  color: #ffff00;
+}
+
+/* Animation classes for smooth transitions */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
